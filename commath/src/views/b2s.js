@@ -31,7 +31,7 @@ function B2s() {
 
   return (
     <div class="body">
-      <Row style={{ marginTop: "15%" }}>
+      <Row style={{ marginTop: "15%" }} >
         <Col sm="2"></Col>
         <Col sm="8">
           <div>
@@ -59,7 +59,7 @@ function B2s() {
                     <Col sm="8">
                       <Button onClick={generate} color="primary">
                         <div style={{ width: 300 }}>
-                          <h3 style={{ marginTop: "10px" }}>แปลง</h3>
+                          <h3 style={{ marginTop: "10px" }}>คำนวณ</h3>
                         </div>
                       </Button>
                     </Col>

@@ -13,3 +13,16 @@ export const getB2s = (b2s) => {
             console.log(err);
         });
 };
+
+export const getElimination = (data) => {
+    return axios
+        .post(apiHost + `/elimination`, data)
+        .then(response => {
+            console.log(response.data);
+            return response.data;
+        })
+        .catch(err => {
+            console.log(err);
+        });
+};
+

@@ -8,14 +8,14 @@ import { useNavigate } from "react-router-dom";
 function Main() {
   const navigate = useNavigate();
 
-  const nextPage = () => {
-    navigate("/b2s");
+  const nextPage = (page) => {
+    navigate("/"+page);
   }
 
   return (
     <div>
       <h1 className="text-center" style={{ marginTop: "5%" }}>
-        เลือก
+        เลือกบท
       </h1>
       <Row style={{ marginTop: "5%" }}>
         <Col sm="2"></Col>
@@ -32,7 +32,7 @@ function Main() {
                     <h4>แปลงเลขฐาน 2</h4>
                   </CardText>
                  
-                    <Button onClick={nextPage} color="primary">
+                    <Button onClick={()=>{nextPage("b2s")}} color="primary">
                       <h3 style={{ marginTop: "10px" }}>เริ่ม</h3>
                     </Button>
                   
@@ -45,9 +45,9 @@ function Main() {
                     <h3 style={{ marginTop: "10px" }}>บทที่ 2</h3>
                   </CardTitle>
                   <CardText>
-                    <h4>.</h4>
+                    <h4>Elimination phase and Back subsituation</h4>
                   </CardText>
-                  <Button disabled>
+                  <Button onClick={()=>{nextPage("elimination")}} color="primary">
                     <h3 style={{ marginTop: "10px" }}>เริ่ม</h3>
                   </Button>
                 </Card>
