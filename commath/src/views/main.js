@@ -106,7 +106,7 @@ function Main() {
                     <h3 style={{ marginTop: "10px" }}>บทที่ 6</h3>
                   </CardTitle>
                   <CardText>
-                    <h4>.</h4>
+                    <h4>Root-finding</h4>
                   </CardText>
                   <Button onClick={()=>{nextPage("root-finding")}} color="primary" disabled>
                     <h3 style={{ marginTop: "10px" }}>เริ่ม</h3>
