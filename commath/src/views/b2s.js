@@ -24,24 +24,29 @@ function B2s() {
       setResult(res);
     });
   };
-  
+
   const back = () => {
     navigate("/");
-  }
+  };
 
   return (
     <div class="body">
-      <Row style={{ marginTop: "15%" }} >
+      <Row style={{ marginTop: "15%" }}>
         <Col sm="2"></Col>
         <Col sm="8">
+          <div className="text-center">
+            <h2 style={{ marginTop: "20px", marginRight: "20px" }}>
+              Basic Computing
+            </h2>
+          </div>
+          <div className="text-center">
+            <p>exam: 01111000000001010000000000000000</p>
+          </div>
           <div>
             <Row>
               <Col sm="2"></Col>
               <Col sm="8">
                 <Card style={{ alignItems: "center" }}>
-                  <CardTitle>
-                    <h2 style={{ marginTop: "10px" }}>เลขฐาน 2</h2>
-                  </CardTitle>
                   <Input
                     style={{
                       marginTop: "20px",

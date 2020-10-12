@@ -26,3 +26,39 @@ export const getElimination = (data) => {
         });
 };
 
+export const getInterpolation = (data) => {
+    return axios
+        .post(apiHost + `/interpolation`, data)
+        .then(response => {
+            console.log(response.data);
+            return response.data;
+        })
+        .catch(err => {
+            console.log(err);
+        });
+};
+
+export const getDifferentiation = (data) => {
+    return axios
+        .post(apiHost + `/differentiation`, data)
+        .then(response => {
+            console.log(response.data);
+            return response.data;
+        })
+        .catch(err => {
+            console.log(err);
+        });
+};
+
+export const getIntegration = (data) => {
+    return axios
+        .post(apiHost + `/integration`, data)
+        .then(response => {
+            console.log(response.data);
+            return response.data;
+        })
+        .catch(err => {
+            console.log(err);
+        });
+};
+

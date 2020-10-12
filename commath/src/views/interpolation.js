@@ -13,28 +13,25 @@ import {
 } from "reactstrap";
 import "../App.css";
 import { useNavigate } from "react-router-dom";
-import { getElimination } from "../functions/function";
+import { getInterpolation } from "../functions/function";
 
-function Elimination() {
+function Interpolation() {
   const navigate = useNavigate();
-  const [a00, seta00] = useState();
-  const [a01, seta01] = useState();
-  const [a02, seta02] = useState();
-  const [a10, seta10] = useState();
-  const [a11, seta11] = useState();
-  const [a12, seta12] = useState();
-  const [a20, seta20] = useState();
-  const [a21, seta21] = useState();
-  const [a22, seta22] = useState();
+  const [x, setx] = useState();
+  const [xi1, setxi1] = useState();
+  const [xi2, setxi2] = useState();
+  const [xi3, setxi3] = useState();
+  const [xi4, setxi4] = useState();
+  const [xi5, setxi5] = useState();
+  const [xi6, setxi6] = useState();
+  const [yi1, setyi1] = useState();
+  const [yi2, setyi2] = useState();
+  const [yi3, setyi3] = useState();
+  const [yi4, setyi4] = useState();
+  const [yi5, setyi5] = useState();
+  const [yi6, setyi6] = useState();
 
-  const [b1, setb1] = useState();
-  const [b2, setb2] = useState();
-  const [b3, setb3] = useState();
-
-  const [x0, setx0] = useState();
-  const [x1, setx1] = useState();
-  const [x2, setx2] = useState();
-
+  const [result, setresult] = useState();
 
   const back = () => {
     navigate("/");
@@ -42,99 +39,68 @@ function Elimination() {
 
   const generate = () => {
     const data = {
-      A:[[a00,a01,a02],[a10,a11,a12],[a20,a21,a22]],
-      b:[b1,b2,b3]
+      x:x,
+      xi:[xi1,xi2,xi3,xi4,xi5,xi6],
+      yi:[yi1,yi2,yi3,yi4,yi5,yi6]
       
     };
-    getElimination(data).then((res) => {
-      setx0(res[0])
-      setx1(res[1])
-      setx2(res[2])
+    getInterpolation(data).then((res) => {
+        setresult(`วินาทีที่ ${x} จะมีความเร็วประมาณ ${res}`)
     });
   };
 
   return (
     <div>
       <Row style={{ marginTop: "5%" }}>
-        <Col sm="4"></Col>
-        <Col sm="4">
+        <Col sm="3"></Col>
+        <Col sm="6">
         <div className="text-center">
-           <h2 style={{ marginTop: "20px", marginRight: "20px" }}>Linear Equations</h2>
+           <h2 style={{ marginTop: "20px", marginRight: "20px" }}>Interpolation</h2>
         </div>
         <div className="text-center">
-           <p>exam:</p>
-           <p>A: [ [ 6 -4 1 ]
-                  [ -4 6 -4 ]
-                  [ 1 -4 6 ] ]
-           </p>
-           <p>b: [-14 36 6 ]</p>
-           
+           <p>exam: t = 5</p>
+           <p>x = [ 0, 8, 14, 20, 23, 30 ]</p>
+           <p>y = [ 0, 50, 96, 110, 100, 86 ]</p>
         </div>
+       
           <Card style={{ alignItems: "center" }}>
             <Row style={{ marginTop: "50px" }}>
-              <Col>
-                <h3>A</h3>
-              </Col>
-              <Col style={{ marginLeft: "350px" }}>
-                <h3>B</h3>
-              </Col>
+              <Col></Col>
             </Row>
 
             <Row>
               <div className="text-center">
                 <Row>
+                  <h3 style={{ marginTop: "20px", marginRight: "20px" }}>x:</h3>
                   <Input
                     style={{
                       marginTop: "20px",
                       marginBottom: "20px",
                       width: 100,
                     }}
-                    value={a00}
+                    value={x}
+                    onChange={(e) => setx(e.target.value)}
                     type="text"
                     name="bit2string"
                     id="bit2string"
-                    onChange={(e) => seta00(e.target.value)}
-                  />
-                  <Input
-                    style={{
-                      marginLeft: "20px",
-                      marginTop: "20px",
-                      marginBottom: "20px",
-                      width: 100,
-                    }}
-                    value={a01}
-                    type="text"
-                    name="bit2string"
-                    id="bit2string"
-                    onChange={(e) => seta01(e.target.value)}
-                  />
-                  <Input
-                    style={{
-                      marginLeft: "20px",
-                      marginTop: "20px",
-                      marginBottom: "20px",
-                      width: 100,
-                    }}
-                    value={a02}
-                    type="text"
-                    name="bit2string"
-                    id="bit2string"
-                    onChange={(e) => seta02(e.target.value)}
                   />
                 </Row>
+                <Row>
+                  <h3 style={{ marginTop: "20px", marginRight: "20px" }}>
+                    xi:
+                  </h3>
 
-                <Row>
                   <Input
                     style={{
                       marginTop: "20px",
                       marginBottom: "20px",
                       width: 100,
                     }}
-                    value={a10}
+                    value={xi1}
+                    onChange={(e) => setxi1(e.target.value)}
                     type="text"
                     name="bit2string"
                     id="bit2string"
-                    onChange={(e) => seta10(e.target.value)}
                   />
                   <Input
                     style={{
@@ -143,11 +109,11 @@ function Elimination() {
                       marginBottom: "20px",
                       width: 100,
                     }}
-                    value={a11}
+                    value={xi2}
+                    onChange={(e) => setxi2(e.target.value)}
                     type="text"
                     name="bit2string"
                     id="bit2string"
-                    onChange={(e) => seta11(e.target.value)}
                   />
                   <Input
                     style={{
@@ -156,26 +122,69 @@ function Elimination() {
                       marginBottom: "20px",
                       width: 100,
                     }}
-                    value={a12}
+                    value={xi3}
+                    onChange={(e) => setxi3(e.target.value)}
                     type="text"
                     name="bit2string"
                     id="bit2string"
-                    onChange={(e) => seta12(e.target.value)}
+                  />
+                  <Input
+                    style={{
+                      marginLeft: "20px",
+                      marginTop: "20px",
+                      marginBottom: "20px",
+                      width: 100,
+                    }}
+                    value={xi4}
+                    onChange={(e) => setxi4(e.target.value)}
+                    type="text"
+                    name="bit2string"
+                    id="bit2string"
+                  />
+                  <Input
+                    style={{
+                      marginLeft: "20px",
+                      marginTop: "20px",
+                      marginBottom: "20px",
+                      width: 100,
+                    }}
+                    value={xi5}
+                    onChange={(e) => setxi5(e.target.value)}
+                    type="text"
+                    name="bit2string"
+                    id="bit2string"
+                  />
+                  <Input
+                    style={{
+                      marginLeft: "20px",
+                      marginTop: "20px",
+                      marginBottom: "20px",
+                      width: 100,
+                    }}
+                    value={xi6}
+                    onChange={(e) => setxi6(e.target.value)}
+                    type="text"
+                    name="bit2string"
+                    id="bit2string"
+                    // onChange={(e) => setxi6(e.target.value)}
                   />
                 </Row>
+                <Row>
+                  <h3 style={{ marginTop: "20px", marginRight: "20px" }}>
+                    yi:
+                  </h3>
 
-                <Row>
                   <Input
                     style={{
                       marginTop: "20px",
                       marginBottom: "20px",
                       width: 100,
                     }}
-                    value={a20}
+                    value={yi1}
+                    onChange={(e) => setyi1(e.target.value)}
                     type="text"
                     name="bit2string"
                     id="bit2string"
-                    onChange={(e) => seta20(e.target.value)}
                   />
                   <Input
                     style={{
@@ -184,11 +193,11 @@ function Elimination() {
                       marginBottom: "20px",
                       width: 100,
                     }}
-                    value={a21}
+                    value={yi2}
+                    onChange={(e) => setyi2(e.target.value)}
                     type="text"
                     name="bit2string"
                     id="bit2string"
-                    onChange={(e) => seta21(e.target.value)}
                   />
                   <Input
                     style={{
@@ -197,17 +206,12 @@ function Elimination() {
                       marginBottom: "20px",
                       width: 100,
                     }}
-                    value={a22}
+                    value={yi3}
+                    onChange={(e) => setyi3(e.target.value)}
                     type="text"
                     name="bit2string"
                     id="bit2string"
-                    onChange={(e) => seta22(e.target.value)}
                   />
-                </Row>
-              </div>
-
-              <div className="text-center" style={{ marginLeft: "100px" }}>
-                <Row>
                   <Input
                     style={{
                       marginLeft: "20px",
@@ -215,14 +219,12 @@ function Elimination() {
                       marginBottom: "20px",
                       width: 100,
                     }}
-                    value={b1}
+                    value={yi4}
+                    onChange={(e) => setyi4(e.target.value)}
                     type="text"
                     name="bit2string"
                     id="bit2string"
-                    onChange={(e) => setb1(e.target.value)}
                   />
-                </Row>
-                <Row>
                   <Input
                     style={{
                       marginLeft: "20px",
@@ -230,14 +232,12 @@ function Elimination() {
                       marginBottom: "20px",
                       width: 100,
                     }}
-                    value={b2}
+                    value={yi5}
+                    onChange={(e) => setyi5(e.target.value)}
                     type="text"
                     name="bit2string"
                     id="bit2string"
-                    onChange={(e) => setb2(e.target.value)}
                   />
-                </Row>
-                <Row>
                   <Input
                     style={{
                       marginLeft: "20px",
@@ -245,18 +245,18 @@ function Elimination() {
                       marginBottom: "20px",
                       width: 100,
                     }}
-                    value={b3}
+                    value={yi6}
+                    onChange={(e) => setyi6(e.target.value)}
                     type="text"
                     name="bit2string"
                     id="bit2string"
-                    onChange={(e) => setb3(e.target.value)}
+                    // onChange={(e) => setxi6(e.target.value)}
                   />
                 </Row>
               </div>
             </Row>
-            <h4 style={{ marginBottom: "10px" }}>x0: {x0}</h4>
-            <h4 style={{ marginBottom: "10px" }}>x1: {x1}</h4>
-            <h4 style={{ marginBottom: "10px" }}>x2: {x2}</h4>
+                <h4 style={{ marginBottom: "10px" }}>Result: {result}</h4>
+
             <Row style={{ marginBottom: "30px" }}>
               <Col sm="8">
                 <Button onClick={generate} color="primary">
@@ -276,9 +276,10 @@ function Elimination() {
           </Card>
         </Col>
 
-        <Col sm="4"></Col>
+        <Col sm="3"></Col>
       </Row>
     </div>
   );
 }
-export default Elimination;
+
+export default Interpolation;
