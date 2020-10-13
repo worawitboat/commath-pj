@@ -77,7 +77,7 @@ function Interpolation() {
                     style={{
                       marginTop: "20px",
                       marginBottom: "20px",
-                      width: 100,
+                      width:60,
                     }}
                     value={x}
                     onChange={(e) => setx(e.target.value)}
@@ -95,7 +95,7 @@ function Interpolation() {
                     style={{
                       marginTop: "20px",
                       marginBottom: "20px",
-                      width: 100,
+                      width:60,
                     }}
                     value={xi1}
                     onChange={(e) => setxi1(e.target.value)}
@@ -108,7 +108,7 @@ function Interpolation() {
                       marginLeft: "20px",
                       marginTop: "20px",
                       marginBottom: "20px",
-                      width: 100,
+                      width:60,
                     }}
                     value={xi2}
                     onChange={(e) => setxi2(e.target.value)}
@@ -121,7 +121,7 @@ function Interpolation() {
                       marginLeft: "20px",
                       marginTop: "20px",
                       marginBottom: "20px",
-                      width: 100,
+                      width:60,
                     }}
                     value={xi3}
                     onChange={(e) => setxi3(e.target.value)}
@@ -134,7 +134,7 @@ function Interpolation() {
                       marginLeft: "20px",
                       marginTop: "20px",
                       marginBottom: "20px",
-                      width: 100,
+                      width:60,
                     }}
                     value={xi4}
                     onChange={(e) => setxi4(e.target.value)}
@@ -147,7 +147,7 @@ function Interpolation() {
                       marginLeft: "20px",
                       marginTop: "20px",
                       marginBottom: "20px",
-                      width: 100,
+                      width:60,
                     }}
                     value={xi5}
                     onChange={(e) => setxi5(e.target.value)}
@@ -160,7 +160,7 @@ function Interpolation() {
                       marginLeft: "20px",
                       marginTop: "20px",
                       marginBottom: "20px",
-                      width: 100,
+                      width:60,
                     }}
                     value={xi6}
                     onChange={(e) => setxi6(e.target.value)}
@@ -179,7 +179,7 @@ function Interpolation() {
                     style={{
                       marginTop: "20px",
                       marginBottom: "20px",
-                      width: 100,
+                      width:60,
                     }}
                     value={yi1}
                     onChange={(e) => setyi1(e.target.value)}
@@ -192,7 +192,7 @@ function Interpolation() {
                       marginLeft: "20px",
                       marginTop: "20px",
                       marginBottom: "20px",
-                      width: 100,
+                      width:60,
                     }}
                     value={yi2}
                     onChange={(e) => setyi2(e.target.value)}
@@ -205,7 +205,7 @@ function Interpolation() {
                       marginLeft: "20px",
                       marginTop: "20px",
                       marginBottom: "20px",
-                      width: 100,
+                      width:60,
                     }}
                     value={yi3}
                     onChange={(e) => setyi3(e.target.value)}
@@ -218,7 +218,7 @@ function Interpolation() {
                       marginLeft: "20px",
                       marginTop: "20px",
                       marginBottom: "20px",
-                      width: 100,
+                      width:60,
                     }}
                     value={yi4}
                     onChange={(e) => setyi4(e.target.value)}
@@ -231,7 +231,7 @@ function Interpolation() {
                       marginLeft: "20px",
                       marginTop: "20px",
                       marginBottom: "20px",
-                      width: 100,
+                      width:60,
                     }}
                     value={yi5}
                     onChange={(e) => setyi5(e.target.value)}
@@ -244,7 +244,7 @@ function Interpolation() {
                       marginLeft: "20px",
                       marginTop: "20px",
                       marginBottom: "20px",
-                      width: 100,
+                      width:60,
                     }}
                     value={yi6}
                     onChange={(e) => setyi6(e.target.value)}

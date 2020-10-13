@@ -71,23 +71,17 @@ function Elimination() {
            
         </div>
           <Card style={{ alignItems: "center" }}>
-            <Row style={{ marginTop: "50px" }}>
-              <Col>
-                <h3>A</h3>
-              </Col>
-              <Col style={{ marginLeft: "350px" }}>
-                <h3>B</h3>
-              </Col>
-            </Row>
+
 
             <Row>
               <div className="text-center">
+                <h3 style={{marginTop:50}}>A</h3>
                 <Row>
                   <Input
                     style={{
                       marginTop: "20px",
                       marginBottom: "20px",
-                      width: 100,
+                      width:60,
                     }}
                     value={a00}
                     type="text"
@@ -100,7 +94,7 @@ function Elimination() {
                       marginLeft: "20px",
                       marginTop: "20px",
                       marginBottom: "20px",
-                      width: 100,
+                      width: 60,
                     }}
                     value={a01}
                     type="text"
@@ -113,7 +107,7 @@ function Elimination() {
                       marginLeft: "20px",
                       marginTop: "20px",
                       marginBottom: "20px",
-                      width: 100,
+                      width:60,
                     }}
                     value={a02}
                     type="text"
@@ -128,7 +122,7 @@ function Elimination() {
                     style={{
                       marginTop: "20px",
                       marginBottom: "20px",
-                      width: 100,
+                      width:60,
                     }}
                     value={a10}
                     type="text"
@@ -141,7 +135,7 @@ function Elimination() {
                       marginLeft: "20px",
                       marginTop: "20px",
                       marginBottom: "20px",
-                      width: 100,
+                      width:60,
                     }}
                     value={a11}
                     type="text"
@@ -154,7 +148,7 @@ function Elimination() {
                       marginLeft: "20px",
                       marginTop: "20px",
                       marginBottom: "20px",
-                      width: 100,
+                      width:60,
                     }}
                     value={a12}
                     type="text"
@@ -169,7 +163,7 @@ function Elimination() {
                     style={{
                       marginTop: "20px",
                       marginBottom: "20px",
-                      width: 100,
+                      width:60,
                     }}
                     value={a20}
                     type="text"
@@ -182,7 +176,7 @@ function Elimination() {
                       marginLeft: "20px",
                       marginTop: "20px",
                       marginBottom: "20px",
-                      width: 100,
+                      width:60,
                     }}
                     value={a21}
                     type="text"
@@ -195,7 +189,7 @@ function Elimination() {
                       marginLeft: "20px",
                       marginTop: "20px",
                       marginBottom: "20px",
-                      width: 100,
+                      width:60,
                     }}
                     value={a22}
                     type="text"
@@ -207,13 +201,14 @@ function Elimination() {
               </div>
 
               <div className="text-center" style={{ marginLeft: "100px" }}>
+              <h3 style={{marginTop:50}}>B</h3>
                 <Row>
                   <Input
                     style={{
                       marginLeft: "20px",
                       marginTop: "20px",
                       marginBottom: "20px",
-                      width: 100,
+                      width:60,
                     }}
                     value={b1}
                     type="text"
@@ -228,7 +223,7 @@ function Elimination() {
                       marginLeft: "20px",
                       marginTop: "20px",
                       marginBottom: "20px",
-                      width: 100,
+                      width:60,
                     }}
                     value={b2}
                     type="text"
@@ -243,7 +238,7 @@ function Elimination() {
                       marginLeft: "20px",
                       marginTop: "20px",
                       marginBottom: "20px",
-                      width: 100,
+                      width:60,
                     }}
                     value={b3}
                     type="text"
