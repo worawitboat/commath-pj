@@ -18,9 +18,9 @@ function Main() {
         เลือกบท
       </h1>
       <Row style={{ marginTop: "5%" }}>
-        <Col sm="2"></Col>
+        <Col sm="3"></Col>
 
-        <Col sm="8">
+        <Col sm="6">
           <div className="text-center">
             <Row>
               <Col sm="6">
@@ -108,7 +108,7 @@ function Main() {
                   <CardText>
                     <h4>Root-finding</h4>
                   </CardText>
-                  <Button onClick={()=>{nextPage("root-finding")}} color="primary" disabled>
+                  <Button onClick={()=>{nextPage("root-finding")}} color="primary">
                     <h3 style={{ marginTop: "10px" }}>เริ่ม</h3>
                   </Button>
                 </Card>
@@ -116,7 +116,7 @@ function Main() {
             </Row>
           </div>
         </Col>
-        <Col sm="2"></Col>
+        <Col sm="3"></Col>
       </Row>
     </div>
   );

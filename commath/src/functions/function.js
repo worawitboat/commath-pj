@@ -62,3 +62,14 @@ export const getIntegration = (data) => {
         });
 };
 
+export const getRootFinding = (data) => {
+    return axios
+        .post(apiHost + `/root-finding`, data)
+        .then(response => {
+            console.log(response.data);
+            return response.data;
+        })
+        .catch(err => {
+            console.log(err);
+        });
+};

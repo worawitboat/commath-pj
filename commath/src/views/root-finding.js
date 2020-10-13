@@ -13,37 +13,46 @@ import {
 } from "reactstrap";
 import "../App.css";
 import { useNavigate } from "react-router-dom";
-import { getDifferentiation } from "../functions/function";
+import { getRootFinding } from "../functions/function";
 
 function RootFinding() {
   const navigate = useNavigate();
-  // const [h, seth] = useState();
-  // const [p, setp] = useState();
+  const [a, seta] = useState();
+  const [b, setb] = useState();
+  const [dx, setdx] = useState();
+  const [result, setresult] = useState();
 
-  // const generate = () => {
-  //   const data = {
-  //     x1: h,
-  //     x2: p,
-  //   };
-  //   getDifferentiation(data).then((res) => {
-  //     setresult(res);
-  //   });
-  // };
+  const back = () => {
+    navigate("/");
+  };
+
+
+  const generate = () => {
+    const data = {
+      a: a,
+      b: b,
+      dx: dx
+    };
+    getRootFinding(data).then((res) => {
+      setresult(res);
+    });
+  };
 
   return (
     <div>
       <Row style={{ marginTop: "5%" }}>
-        <Col sm="4"></Col>
-        <Col sm="4">
+        <Col sm="3"></Col>
+        <Col sm="6">
           <div className="text-center">
             <h2 style={{ marginTop: "20px", marginRight: "20px" }}>
               Root-finding
             </h2>
           </div>
-          {/* <div className="text-center">
+          <div className="text-center">
             <p>exam:</p>
-            <p>h = 0.64</p>
-            <p>p = 2</p>
+            <p>a = 0</p>
+            <p>b = 1</p>
+            <p>dx = 0.0001</p>
           </div>
 
           <Card style={{ alignItems: "center" }}>
@@ -54,30 +63,45 @@ function RootFinding() {
             <Row>
               <div className="text-center">
                 <Row>
-                  <h3 style={{ marginTop: "20px", marginRight: "20px" }}>h:</h3>
+                  <h3 style={{ marginTop: "20px", marginRight: "20px" }}>a:</h3>
                   <Input
                     style={{
                       marginTop: "20px",
                       marginBottom: "20px",
                       width: 100,
                     }}
-                    value={h}
-                    onChange={(e) => seth(e.target.value)}
+                    value={a}
+                    onChange={(e) => seta(e.target.value)}
                     type="text"
                     name="bit2string"
                     id="bit2string"
                   />
                 </Row>
                 <Row>
-                  <h3 style={{ marginTop: "20px", marginRight: "20px" }}>p:</h3>
+                  <h3 style={{ marginTop: "20px", marginRight: "20px" }}>b:</h3>
                   <Input
                     style={{
                       marginTop: "20px",
                       marginBottom: "20px",
                       width: 100,
                     }}
-                    value={p}
-                    onChange={(e) => setp(e.target.value)}
+                    value={b}
+                    onChange={(e) => setb(e.target.value)}
+                    type="text"
+                    name="bit2string"
+                    id="bit2string"
+                  />
+                </Row>
+                <Row>
+                  <h3 style={{ marginTop: "20px", marginRight: "20px" }}>dx:</h3>
+                  <Input
+                    style={{
+                      marginTop: "20px",
+                      marginBottom: "20px",
+                      width: 100,
+                    }}
+                    value={dx}
+                    onChange={(e) => setdx(e.target.value)}
                     type="text"
                     name="bit2string"
                     id="bit2string"
@@ -103,10 +127,10 @@ function RootFinding() {
                 </Button>
               </Col>
             </Row>
-          </Card> */}
+          </Card>
         </Col>
 
-        <Col sm="4"></Col>
+        <Col sm="3"></Col>
       </Row>
     </div>
   );

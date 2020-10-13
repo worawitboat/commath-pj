@@ -60,7 +60,7 @@ function B2s() {
                     onChange={(e) => setBit2string(e.target.value)}
                   />
                   <h4>ผลลัพธ์: {result}</h4>
-                  <Row>
+                  <Row style={{ marginBottom: "30px" }}>
                     <Col sm="8">
                       <Button onClick={generate} color="primary">
                         <div style={{ width: 300 }}>

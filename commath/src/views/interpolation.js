@@ -58,7 +58,8 @@ function Interpolation() {
            <h2 style={{ marginTop: "20px", marginRight: "20px" }}>Interpolation</h2>
         </div>
         <div className="text-center">
-           <p>exam: t = 5</p>
+           <p>exam:</p>
+           <p>t = 5</p>
            <p>x = [ 0, 8, 14, 20, 23, 30 ]</p>
            <p>y = [ 0, 50, 96, 110, 100, 86 ]</p>
         </div>
@@ -71,7 +72,7 @@ function Interpolation() {
             <Row>
               <div className="text-center">
                 <Row>
-                  <h3 style={{ marginTop: "20px", marginRight: "20px" }}>x:</h3>
+                  <h3 style={{ marginTop: "20px", marginRight: "20px" }}>t:</h3>
                   <Input
                     style={{
                       marginTop: "20px",
