@@ -17,8 +17,8 @@ import { getDifferentiation } from "../functions/function";
 
 function Differentiation() {
   const navigate = useNavigate();
-  const [h, seth] = useState();
-  const [p, setp] = useState();
+  const [h, seth] = useState(0.64);
+  const [p, setp] = useState(2);
 
   const [result, setresult] = useState();
 

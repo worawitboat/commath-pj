@@ -17,9 +17,9 @@ import { getRootFinding } from "../functions/function";
 
 function RootFinding() {
   const navigate = useNavigate();
-  const [a, seta] = useState();
-  const [b, setb] = useState();
-  const [dx, setdx] = useState();
+  const [a, seta] = useState(0);
+  const [b, setb] = useState(1);
+  const [dx, setdx] = useState(0.0001);
   const [result, setresult] = useState();
 
   const back = () => {

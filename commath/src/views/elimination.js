@@ -17,19 +17,19 @@ import { getElimination } from "../functions/function";
 
 function Elimination() {
   const navigate = useNavigate();
-  const [a00, seta00] = useState();
-  const [a01, seta01] = useState();
-  const [a02, seta02] = useState();
-  const [a10, seta10] = useState();
-  const [a11, seta11] = useState();
-  const [a12, seta12] = useState();
-  const [a20, seta20] = useState();
-  const [a21, seta21] = useState();
-  const [a22, seta22] = useState();
+  const [a00, seta00] = useState(6);
+  const [a01, seta01] = useState(-4);
+  const [a02, seta02] = useState(1);
+  const [a10, seta10] = useState(-4);
+  const [a11, seta11] = useState(6);
+  const [a12, seta12] = useState(-4);
+  const [a20, seta20] = useState(1);
+  const [a21, seta21] = useState(-4);
+  const [a22, seta22] = useState(6);
 
-  const [b1, setb1] = useState();
-  const [b2, setb2] = useState();
-  const [b3, setb3] = useState();
+  const [b1, setb1] = useState(-14);
+  const [b2, setb2] = useState(36);
+  const [b3, setb3] = useState(6);
 
   const [x0, setx0] = useState();
   const [x1, setx1] = useState();

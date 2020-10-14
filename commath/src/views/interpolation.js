@@ -17,19 +17,19 @@ import { getInterpolation } from "../functions/function";
 
 function Interpolation() {
   const navigate = useNavigate();
-  const [x, setx] = useState();
-  const [xi1, setxi1] = useState();
-  const [xi2, setxi2] = useState();
-  const [xi3, setxi3] = useState();
-  const [xi4, setxi4] = useState();
-  const [xi5, setxi5] = useState();
-  const [xi6, setxi6] = useState();
-  const [yi1, setyi1] = useState();
-  const [yi2, setyi2] = useState();
-  const [yi3, setyi3] = useState();
-  const [yi4, setyi4] = useState();
-  const [yi5, setyi5] = useState();
-  const [yi6, setyi6] = useState();
+  const [x, setx] = useState(5);
+  const [xi1, setxi1] = useState(0);
+  const [xi2, setxi2] = useState(8);
+  const [xi3, setxi3] = useState(14);
+  const [xi4, setxi4] = useState(20);
+  const [xi5, setxi5] = useState(23);
+  const [xi6, setxi6] = useState(30);
+  const [yi1, setyi1] = useState(0);
+  const [yi2, setyi2] = useState(50);
+  const [yi3, setyi3] = useState(96);
+  const [yi4, setyi4] = useState(110);
+  const [yi5, setyi5] = useState(100);
+  const [yi6, setyi6] = useState(86);
 
   const [result, setresult] = useState();
 

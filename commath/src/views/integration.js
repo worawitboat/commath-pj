@@ -19,8 +19,8 @@ function Integration() {
   const navigate = useNavigate();
 
   const [result, setresult] = useState();
-  const [a, seta] = useState();
-  const [b, setb] = useState();
+  const [a, seta] = useState(0);
+  const [b, setb] = useState(3);
 
   const back = () => {
     navigate("/");
