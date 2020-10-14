@@ -134,8 +134,6 @@ def api(data:integration):
     return simpson(f, int(data.a), int(data.b))
  
 
-
-
 @app.post("/root-finding")
 def api(data:rootFinding):
     def f(x):
